@@ -1,0 +1,22 @@
+{
+  "short_name": "사이버관제PWA",
+  "name": "군 사이버위협 트래픽 현황 분석 및 긴급 대응 시스템",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/192/shield.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/color/512/shield.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "description": "300,000건 군 방화벽 트래픽 AI 분석 및 C2 긴급 대응 PWA"
+}

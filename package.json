@@ -1,0 +1,19 @@
+{
+  "name": "cyber-defense-pwa",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "군 사이버위협 트래픽 현황 분석 및 긴급 대응 PWA (Cyber Defense PWA)",
+  "scripts": {
+    "dev": "python -m http.server 5173",
+    "test": "pytest tests/test_log_analyzer.py -v"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "chart.js": "^4.4.3",
+    "@supabase/supabase-js": "^2.43.4"
+  }
+}

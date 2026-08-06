@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Dark Cyber Security Theme - 군 사이버위협 관제 PWA Design System
+   ========================================================================== */
+
+:root {
+  --bg-dark-primary: #0f172a;       /* Slate 900 */
+  --bg-dark-secondary: #1e293b;     /* Slate 800 */
+  --bg-dark-card: rgba(30, 41, 59, 0.85);
+  --bg-dark-hover: #334155;        /* Slate 700 */
+  
+  --border-cyber: rgba(56, 189, 248, 0.2);
+  --border-cyber-active: #38bdf8;
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  --color-cyan: #00f2fe;
+  --color-blue: #0284c7;
+  --color-emerald: #10b981;
+  --color-amber: #f59e0b;
+  --color-crimson: #ef4444;
+  --color-purple: #a855f7;
+
+  --shadow-neon: 0 0 15px rgba(2, 132, 199, 0.3);
+  --shadow-alert: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+body {
+  background-color: var(--bg-dark-primary);
+  color: var(--text-main);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Cards */
+.cyber-card {
+  background: var(--bg-dark-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-cyber);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease-in-out;
+}
+
+.cyber-card:hover {
+  border-color: var(--border-cyber-active);
+  box-shadow: var(--shadow-neon);
+}
+
+.cyber-card-alert {
+  border: 1px solid var(--color-crimson) !important;
+  animation: pulse-alert 2s infinite;
+}
+
+@keyframes pulse-alert {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Pulsing Red Ticker Badge */
+.pulse-red-badge {
+  background-color: var(--color-crimson);
+  color: #fff;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  animation: blink-red 1.2s infinite ease-in-out;
+}
+
+@keyframes blink-red {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+/* Cyber Badges */
+.badge-pol-101 { background-color: #0284c7; color: #fff; }
+.badge-pol-999 { background-color: #64748b; color: #fff; }
+.badge-pol-scan { background-color: #f59e0b; color: #000; }
+.badge-pol-auth { background-color: #a855f7; color: #fff; }
+.badge-pol-ddos { background-color: #ec4899; color: #fff; }
+.badge-pol-201  { background-color: #ef4444; color: #fff; font-weight: bold; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Navigation Layout */
+.sidebar-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  color: #fff;
+  background: rgba(2, 132, 199, 0.2);
+  border-left: 4px solid var(--color-cyan);
+}
+
+/* Table Dark Styling */
+.table-cyber {
+  color: var(--text-main);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-cyber th {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--border-cyber);
+}
+
+.table-cyber tbody tr:hover {
+  background-color: rgba(51, 65, 85, 0.5);
+}
+
+/* Timeline SOP Items */
+.sop-timeline-item {
+  position: relative;
+  padding-left: 28px;
+  border-left: 2px solid var(--border-cyber);
+  padding-bottom: 20px;
+}
+.sop-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+}
+.sop-timeline-item.danger::before {
+  background: var(--color-crimson);
+  box-shadow: 0 0 10px var(--color-crimson);
+}
