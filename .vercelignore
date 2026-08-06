@@ -1,0 +1,5 @@
+requirements.txt
+tests/
+.pytest_cache/
+*.pptx
+pptx_extracted*.txt
